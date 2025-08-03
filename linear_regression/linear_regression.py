@@ -18,7 +18,7 @@ class LinearRegression:
         self.bias = np.random.rand(1)  # Initialize bias randomly
         self.loss_history = []
 
-    def predict(self, x):   # Predict function model => y = Wx + b
+    def hypothesis(self, x):   # Predict function model => y = Wx + b
         return np.dot(x, self.weights) + self.bias
 
     def mean_squared_error(self, y_true, y_pred):
@@ -29,7 +29,7 @@ class LinearRegression:
         y = y.reshape(-1, 1)  # Ensure y is a column vector (because Wx + b expects column vector)
         
         for epoch in range(epochs):
-            y_pred = self.predict(x)
+            y_pred = self.hypothesis(x)
             loss = self.mean_squared_error(y, y_pred)
             self.loss_history.append(loss)
 
@@ -71,7 +71,7 @@ ax1.set_ylabel('Mean Squared Error')
 
 ax2 = axes[1] # Right side canvas
 ax2.scatter(X, y, alpha=0.6, edgecolors='k', label='Data Points') 
-ax2.plot(X, model.predict(X), color='crimson', linewidth=3, label='Regression Line')
+ax2.plot(X, model.hypothesis(X), color='crimson', linewidth=3, label='Regression Line')
 ax2.set_title('Regression Fit on Data', fontsize=14)
 ax2.set_xlabel('X (Feature)')
 ax2.set_ylabel('y (Target)')

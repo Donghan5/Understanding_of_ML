@@ -55,3 +55,8 @@ Update the weights and bias by taking a small step in the opposite direction of 
 W  =  W  -  learning_rate * dW
 
 b  =  b  -  learning_rate * db
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## How to test?
+1. `chmod +x auto_python_result.sh`
+2. `./auto_python_result.sh`
+3. To clean .csv, .png files `make clean`

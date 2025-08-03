@@ -5,6 +5,9 @@
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
+#include <algorithm>
+#include <fstream>
+#include <random>
 
 class LinearRegression {
     
@@ -17,7 +20,7 @@ class LinearRegression {
     public:
         LinearRegression();
         ~LinearRegression();
-        void fit(const std::vector<double>& x, const std::vector<double>& y, int epochs = 1000);
+        void fit(const std::vector<double>& x, const std::vector<double>& y, int epochs, std::vector<double>& lossHistory);
         double predict(double x) const;
         double meanSquaredError(const std::vector<double>& yTrue, const std::vector<double>& yPred) const;
 };

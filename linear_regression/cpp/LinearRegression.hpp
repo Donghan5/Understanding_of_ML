@@ -1,5 +1,5 @@
-#ifndef LINEAR_REGRESSION_H
-#define LINEAR_REGRESSION_H
+#ifndef LINEAR_REGRESSION_HPP
+#define LINEAR_REGRESSION_HPP
 
 #include <vector>
 #include <iostream>
@@ -20,9 +20,9 @@ class LinearRegression {
     public:
         LinearRegression();
         ~LinearRegression();
-        void fit(const std::vector<double>& x, const std::vector<double>& y, int epochs, std::vector<double>& lossHistory);
+        void gradientDescent(const std::vector<double>& x, const std::vector<double>& y, int epochs, std::vector<double>& lossHistory);
         double predict(double x) const;
         double meanSquaredError(const std::vector<double>& yTrue, const std::vector<double>& yPred) const;
 };
 
-#endif // LINEAR_REGRESSION_H
+#endif // LINEAR_REGRESSION_HPP

@@ -16,9 +16,18 @@ echo "Moving to linear_regression directory..."
 cd linear_regression
 
 echo "Compiling C++ code..."
+cd cpp
 make
 
 echo "Running C++ code... and make visualization"
+./linear_model
+make plot
+
+echo "Compiling C code..."
+cd ../c
+make
+
+echo "Running C code... and make visualization"
 ./linear_model
 make plot
 

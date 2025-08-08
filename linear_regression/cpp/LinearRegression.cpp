@@ -46,7 +46,7 @@ double LinearRegression::predict(double x) const {
  * @param y: target values
  * @param epochs: number of iterations for training
  */
-void LinearRegression::fit(const std::vector<double>& x, const std::vector<double>& y, int epochs, std::vector<double>& lossHistory) {
+void LinearRegression::gradientDescent(const std::vector<double>& x, const std::vector<double>& y, int epochs, std::vector<double>& lossHistory) {
     if (x.size() != y.size()) {
         throw std::invalid_argument("Input and output vectors must be of the same size.");
     }
@@ -93,7 +93,7 @@ int main() {
 
     LinearRegression model;
     std::vector<double> loss_history;
-    model.fit(X, y, 100, loss_history);
+    model.gradientDescent(X, y, 100, loss_history);
 
     std::ofstream results_file("results.csv");
     results_file << "X,y_true,y_pred\n";

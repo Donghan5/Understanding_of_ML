@@ -59,4 +59,4 @@ b  =  b  -  learning_rate * db
 ## How to test?
 1. `chmod +x auto_python_result.sh`
 2. `./auto_python_result.sh`
-3. To clean .csv, .png files `make clean`
+3. To clean .csv, .png files move each c/cpp folders and do `make clean`

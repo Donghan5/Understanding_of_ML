@@ -24,7 +24,7 @@ class LogisticRegression {
         void fit(const std::vector<double>& X, const std::vector<int>& y, int epochs, std::vector<double>& lossHistory);
         double hypothesis(double x) const;
         double sigmoid(double z) const;
-        double binary_cross_entropy(const std::vector<int>& y_true, const std::vector<double>& y_pred) const;        
+        double binaryCrossEntropy(const std::vector<int>& y_true, const std::vector<double>& y_pred) const;        
         
         // Getters for w and b
         double get_weight() const { return w; }

@@ -12,7 +12,9 @@ double LogisticRegression::hypothesis(double x) const {
     return sigmoid(w * x + b);
 }
 
-double LogisticRegression::binary_cross_entropy(const std::vector<int>& y_true, const std::vector<double>& y_pred) const {
+// Just computing binary cross entropy, I will use it after.
+// currently not using in this codes. Keep it now
+double LogisticRegression::binaryCrossEntropy(const std::vector<int>& y_true, const std::vector<double>& y_pred) const {
     if (y_true.size() != y_pred.size()) {
         throw std::invalid_argument("Vectors must be of the same size for binary cross-entropy calculation.");
     }
@@ -24,8 +26,8 @@ double LogisticRegression::binary_cross_entropy(const std::vector<int>& y_true, 
         loss += -(y_true[i] * std::log(clipped_pred) + (1 - y_true[i]) * std::log(1 - clipped_pred));
     }
 
-    double mean_loss = loss / y_true.size();
-    return mean_loss;
+    double meanLoss = loss / y_true.size();
+    return meanLoss;
 }
 
 void LogisticRegression::fit(const std::vector<double>& X, const std::vector<int>& y, int epochs, std::vector<double>& lossHistory) {
@@ -50,7 +52,7 @@ void LogisticRegression::fit(const std::vector<double>& X, const std::vector<int
             dWSum += error * X[i];
             dbSum += error;
 
-            // Calculate current loss
+            // Calculate current loss with binary cross entropy
             double eps = 1e-15; // to avoid log(0)
             double clipped_pred = std::max(eps, std::min(1 - eps, yPred));
             currentLoss += -(y[i] * std::log(clipped_pred) + (1 - y[i]) * std::log(1.0 - clipped_pred));

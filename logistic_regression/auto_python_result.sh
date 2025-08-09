@@ -16,9 +16,18 @@ echo "Moving to logistic_regression directory..."
 cd logistic_regression
 
 echo "Compiling C++ code..."
+cd cpp
 make
 
 echo "Running C++ code... and make visualization"
+./logistic_model
+make plot
+
+echo "Compiling C code ..."
+cd ../c
+make
+
+echo "Running C code..."
 ./logistic_model
 make plot
 

@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "ratio": "cpp",
-        "stdexcept": "cpp",
-        "linear_regression.h": "c"
-    }
-}

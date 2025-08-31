@@ -6,7 +6,7 @@
     4. Implement Logistic regression with pytorch -> done
     5. Implement Logistic regression with numpy -> done
     6. Implement Logistic regression in C++ / C-> done
-    7. Implement Multivariable Linear regression with pytorch
+    7. Implement Multivariable Linear regression(multiple regression) with pytorch
     8. Implement Multivariable Linear regression with numpy
     9. Implement Multivariable Linear regression in C++ / C
     10. Implement MLP in Python

@@ -1,5 +1,5 @@
-#ifndef LOGISTIC_REGRESSION_H
-#define LOGISTIC_REGRESSION_H
+#ifndef LOGISTICREGRESSION_H
+#define LOGISTICREGRESSION_H
 
 #include <vector>
 #include <cmath>

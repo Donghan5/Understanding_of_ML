@@ -72,7 +72,7 @@ ax2.scatter(X[y==1], y[y==1], alpha=0.7, edgecolors='k', label='Class 1')
 x_boundary = np.linspace(X.min(), X.max(), 100).reshape(-1, 1)
 y_boundary = model.hypothesis(x_boundary)
 ax2.plot(x_boundary, y_boundary, color='crimson', linewidth=3, label='Predicted Probability')
-ax2.axhline(y=0.5, color='gray', linestyle='--', label='Threshold (0.5)') # 0.5 기준선
+ax2.axhline(y=0.5, color='gray', linestyle='--', label='Threshold (0.5)')
 
 ax2.set_title('Logistic Regression Fit', fontsize=14)
 ax2.set_xlabel('X (Feature)')
@@ -80,6 +80,6 @@ ax2.set_ylabel('Probability (y_pred)')
 ax2.legend()
 
 plt.tight_layout(rect=[0, 0, 1, 0.96])
-plt.savefig("logistic_regression_analysis_corrected.png", dpi=150)
+plt.savefig("logistic_regression_result_numpy.png", dpi=150)
 plt.show()
 plt.close()

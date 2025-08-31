@@ -1,5 +1,5 @@
-#ifndef LINEAR_REGRESSION_HPP
-#define LINEAR_REGRESSION_HPP
+#ifndef LINEARREGRESSION_HPP
+#define LINEARREGRESSION_HPP
 
 #include <vector>
 #include <iostream>

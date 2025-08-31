@@ -79,6 +79,6 @@ ax2.legend()
 
 # Adjust layout to prevent overlap with main title
 plt.tight_layout(rect=[0, 0, 1, 0.96])
-plt.savefig("linear_regression_analysis.png", dpi=150) # Save with higher resolution
+plt.savefig("linear_regression_result_numpy.png", dpi=150) # Save with higher resolution
 plt.show()
 plt.close()

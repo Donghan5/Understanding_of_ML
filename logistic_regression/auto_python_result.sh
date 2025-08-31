@@ -32,6 +32,7 @@ echo "Running C code..."
 make plot
 
 echo "Running Python visualization script..."
+cd ../python
 python3 logistic_regression.py
 python3 logistic_regression_pytorch.py
 
